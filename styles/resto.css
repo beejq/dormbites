@@ -1,0 +1,500 @@
+*{
+    font-family: "Inter", sans-serif;
+}
+
+html{
+    background: #eaece4;
+}
+
+body{
+    margin:auto;
+    max-width:1200px;
+}
+/* Navigation CSS */
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: white;
+    width: auto;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    list-style: none;
+    font-size: 16px;
+    margin-right: 38px;
+}
+
+ul li{
+    margin-top: 32px;
+    margin-bottom: 34px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #1E1E1E;
+}
+
+#logo{
+    height: 80px;
+    width: 190px;
+    margin-top: 18px;
+    margin-bottom: 2px;
+}
+
+/* Responsive Navigation Bar */
+@media (max-width: 600px){
+    .navigation li:not(:last-child){
+        display: none;
+    }
+    
+    .navigation li #hamburger{
+        display: block;
+    }
+}
+
+#hamburger{
+    display: none;
+}
+/* Map */
+
+.map-container {
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+
+/* Main Content CSS */
+section{
+    background-color: #FFFFFF;
+}
+
+/* Middle Part */
+.main-content{
+    display: flex;
+    flex-direction: row;
+}
+
+/* Left Side Filters */
+
+.left-side-filters{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 240px;
+    height: auto;
+    border: 1px solid #D9D9D9; 
+    margin: 32px 64px 29px 32px;
+    border-radius: 8px;
+    max-width: 100%;
+    padding-bottom: 16px;
+}
+
+/* Keywords  */
+
+.keywords-filter{
+    display: flex;
+    flex-direction: column;
+}
+
+.keywords-filter .title{
+    text-align: left;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 16px;
+    padding: 0;
+    width: fit-content;
+}
+
+.keywords-filter .keywords ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 12px 16px 24px 16px;
+    gap: 4px;
+    flex-wrap: wrap;
+}
+
+.keywords-filter .keywords ul li{
+    margin: 0;
+    padding: 0;
+}
+
+.keywords-filter button{
+    border-radius: 8px;
+    padding: 8px;
+    border: 0;
+    cursor: pointer;
+}
+
+.keywords-filter .plus-button{
+    border-radius: 32px;
+    width: 32px;
+    height: 32px;
+    background-color: #3B4818;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+/* Price Filter */
+
+.estimated-price-filter{
+    display: flex;
+    flex-direction: column;
+}
+
+.estimated-price-filter .title-and-price{
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    font-size: 16px;
+    font-weight: 600px;
+    margin-left: 16px;
+    margin-right: 16px;
+    white-space: nowrap;
+}
+
+.price-slider{
+    margin-left: 16px;
+    margin-bottom: 24px;
+}
+
+.price-slider input{
+    width: 208px;
+}
+
+/* Match Filter */
+
+.match-filter{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+    margin-left: 16px;
+}
+
+/* Ingredient Filter */
+
+.ingredients-filter{
+    margin-left: 16px;
+}
+
+.ingredient-types{
+    display:flex;
+    flex-direction: column;
+    line-height: 0px;
+}
+
+.buttonAndlabel{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+}
+
+.buttonAndlabel button{
+    background-color: #3B4818;
+    border-radius: 32px;
+    border: none;
+    width: 16px;
+    height: 16px;
+    background-color: #3B4818;
+    color: #FFFFFF;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    align-self: center;
+}
+
+.buttonAndlabel i{
+    display: flex;
+    font-size: 8px;
+}
+
+/* Search Bar with Filters */
+
+.search-bar-with-filters{
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    margin-top: 32px;
+    margin-bottom: 48px;
+    gap: 26px;
+}
+
+.filters{
+    align-content: center;
+}
+
+.filters ul{
+    margin: 0px;
+    gap: 8px;
+    padding: 0px;
+}
+
+.filters ul li{
+    margin: 0px;
+}
+
+.filters button{
+    height: 40px;
+    min-width: fit-content;
+    border-radius: 8px;
+    border: none;
+    background-color: #F5F5F5;
+    color: #757575;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 8px;
+    white-space: nowrap;
+}
+
+#search-filter{
+    width: 327px;
+    height: 40px;
+    border-radius: 99px;
+    border: solid 1px #D9D9D9;
+    padding: 16px;
+    font-size: 16px;
+}
+
+#current{
+    color: #F5F5F5;
+    background: #2C2C2C;
+}
+
+/* Ingredients Collapse */
+.checkboxes{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    visibility: hidden;
+    height: 0;
+}
+
+.checkboxes.active{
+    visibility: visible;
+    height: auto;
+    font-weight: normal;
+}
+
+.checkboxes input{
+    margin-right: 12px;
+}
+
+/* Recipe Grid */
+
+.recipe-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-right: 0px;
+}
+.recipe-box ul{
+    padding: 0px;
+    margin-top: 0px;
+}
+
+.recipe-box li{
+    padding: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    cursor: pointer;
+}
+
+.resto-container{
+    background-image: url('../images/burg.png');
+    background-size: cover;
+    border-radius: 15px 15px 20px 20px;
+    height: 400px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.resto-info {
+    background-color: #ffffff;
+    border-radius: 8px 8px 8px 8px;
+    padding: 10px;
+    padding-top: 10px;
+    margin-top: 244px;
+    margin-left: 25px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 230px;
+    height: auto;
+    
+
+}
+
+.resto-title {
+    font-size: 20px;
+    padding-bottom: 4px ;
+}
+.resto-type {
+    font-size: 13px;
+    padding-bottom: 3px ;
+}
+.resto-loc {
+    font-size: 13px;
+    padding-bottom: 3px ;
+}
+.resto-price {
+    font-size: 13px;
+    padding-bottom: 4px ;
+}
+.resto-button{
+    font-size: 14px;
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
+
+    height: 30px;
+    min-width: fit-content;
+    border-radius: 4px;
+    border: none;
+    background-color: #43521A;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 1px;
+    white-space: nowrap;
+}
+/* Footer Section */
+
+.footer-content{
+    background-color: #43521A;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    padding-top: 16px;
+    padding-bottom: 262px;
+    align-items: flex-start;
+}
+
+.social-media-logos{
+    width: 262px;
+    margin-left: 32px;
+}
+
+.social-media-logos .social-media-list{
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.social-media-list li{
+    margin-top: 16px;
+    line-height: 0;
+}
+
+.about-links{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    align-items: left;
+    width: 262px;
+    margin-left: 16px;
+}
+
+.about-links ul{
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+}
+
+.about-links a{
+    color: white;
+}
+
+.about-links .about-list li{
+    margin: 0px;
+}
+
+.about-links .about-list{
+    padding: 0px;
+    text-align: left;
+}
+
+.footer-title{
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 28px;
+}
+
+.quick-links{
+    margin: 0px 0px 0px 16px;
+    width: 262px;
+}
+
+.quick-links-list{
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+}
+
+.quick-links-list li{
+    margin: 0px;
+    text-align: left;
+}
+
+.quick-links-list a{
+    color: white;
+}
+
+.follow-us{
+    display: flex;
+    flex-direction: column;
+    width: 262px;
+    margin-left: 16px;
+}
+
+.follow-us .follow-list{
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px;
+    text-align: left;
+}
+
+.follow-us .follow-list li{
+    margin: 0px;
+}
+
+.follow-us .follow-list li a{
+    color: white;
+}
+
+/* Responsive Footer Section */
+
+@media (max-width:800px){
+    .footer-content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-title{
+        margin-top: 32px;
+    }
+}
+
+/* Active Page Indicator */
+.active{
+    font-weight: bolder;
+}
+
+/* Style for Links */
+
+a{
+    text-decoration: none;
+    color: black;
+}

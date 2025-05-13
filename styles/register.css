@@ -1,0 +1,289 @@
+*{
+    font-family: "Inter", sans-serif;
+}
+
+html{
+    background: #eaece4;
+}
+
+body{
+    margin:auto;
+    max-width:1200px;
+    text-align:center;
+    }
+
+/* Navigation CSS */
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: white;
+    width: auto;
+    height: 118px;
+}
+
+.sign-access{
+    border-radius: 8px;
+    border-width: 1px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    height: fit-content;
+}
+
+.sign-access a{
+    text-decoration: none;
+    color: black;
+}
+
+.navigation{
+    align-items: center;
+    margin: 16px 38px 16px 0px;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    gap: 12px;
+    list-style: none;
+    font-size: 16px;
+    margin-right: 38px;
+}
+
+ul li{
+    margin-top: 32px;
+    margin-bottom: 34px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #1E1E1E;
+}
+
+#logo{
+    height: 80px;
+    width: 190px;
+    margin-top: 18px;
+    margin-bottom: 2px;
+}
+
+/* Responsive Navigation Bar */
+@media (max-width: 600px){
+    .navigation li:not(:last-child){
+        display: none;
+    }
+}
+
+.body-content{
+    width: auto;
+    height: 854px;
+    background-color: #EFE9E2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sign-in-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.sign-in-box{
+    background-color: #55594A;
+    width: 312px;
+    height: 320px;
+    border-radius: 8px;
+}
+
+.user-fields{
+    margin: 24px 24px 0px 24px;
+}
+
+input[type=email]{
+    width: 272px;
+    height: 40px;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: #522504;
+    border-width: 1px;
+    align-self: center;
+}
+
+input[type=password]{
+    width: 272px;
+    height: 40px;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: #522504;
+    border-width: 1px;
+    align-self: center;
+}
+
+input[type=submit]{
+    width: 278px;
+    height: 44px;
+    border-radius: 8px;
+    align-items: center;
+    border-style: solid;
+    border-color: #2C2C2C;
+    border-width: 1px;
+    margin-top: 24px;
+    color: white;
+    background-color: #2C2C2C;
+    cursor: pointer;
+}
+
+.username{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    text-align: left;
+    margin-bottom: 24px;
+}
+
+.password{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.submit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sign-up a{
+    color: white;
+}
+
+/* Footer Section */
+
+.footer-content{
+    background-color: #43521A;
+    display: flex;
+    flex-direction: row;
+    color: white;
+    padding-top: 16px;
+    padding-bottom: 262px;
+    align-items: flex-start;
+}
+
+.social-media-logos{
+    width: 262px;
+    margin-left: 32px;
+}
+
+.social-media-logos .social-media-list{
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.social-media-list li{
+    margin-top: 16px;
+    line-height: 0;
+}
+
+.about-links{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    align-items: left;
+    width: 262px;
+    margin-left: 16px;
+}
+
+.about-links ul{
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+}
+
+.about-links a{
+    color: white;
+}
+
+.about-links .about-list li{
+    margin: 0px;
+}
+
+.about-links .about-list{
+    padding: 0px;
+    text-align: left;
+}
+
+.footer-title{
+    font-size: 16px;
+    font-weight: 500;
+    text-align: left;
+    margin-bottom: 28px;
+}
+
+.quick-links{
+    margin: 0px 0px 0px 16px;
+    width: 262px;
+}
+
+.quick-links-list{
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    padding: 0px;
+}
+
+.quick-links-list li{
+    margin: 0px;
+    text-align: left;
+}
+
+.quick-links-list a{
+    color: white;
+}
+
+.follow-us{
+    display: flex;
+    flex-direction: column;
+    width: 262px;
+    margin-left: 16px;
+}
+
+.follow-us .follow-list{
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px;
+    text-align: left;
+}
+
+.follow-us .follow-list li{
+    margin: 0px;
+}
+
+.follow-us .follow-list li a{
+    color: white;
+}
+
+/* Responsive Footer Section */
+
+@media (max-width:800px){
+    .footer-content{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-title{
+        margin-top: 32px;
+    }
+}

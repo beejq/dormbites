@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Locator</title>
+    <link rel="stylesheet" href="../styles/resto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="home.html"><img id="logo" src="../images/logo.png" alt=""></a>
+        <ul class="navigation">
+            <li><a href="home.html">Home</a></li>
+            <li><a class="active" href="../pages/resto.html">Restaurants</a></li>
+            <li><a href="">Recipes</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">ExampleUser</a></li>
+            <li><a id="hamburger" href="">
+                <i class="fa fa-bars"></i>
+            </a></li>
+        </ul>
+    </nav>
+    <div class="map-container">
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d342.7222974108208!2d123.18684348274839!3d13.629748882356516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a18ddaf3f78c0f%3A0xed1f8cc22a242a9c!2sBurgbox!5e0!3m2!1sen!2sph!4v1746617205056!5m2!1sen!2sph" width="1100" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
+    <!-- Main Content -->
+     <section>
+        <div class="main-content">
+            <div class="left-side-filters">
+                <div class="keywords-filter">
+                    <div class="title">
+                        <p>Keywords</p>
+                    </div>
+                    <div class="keywords">
+                        <ul>
+                            <li><button>Spicy</button></li>
+                            <li><button>Filipino</button></li>
+                            <li><button>Savory</button></li>
+                            <li><button>Sweet</button></li>
+                            <li><button class="plus-button">+</button></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="estimated-price-filter">
+                    <div class="title-and-price">
+                        <p>Estimated Price</p>
+                        <p>₱0-500</p>
+                    </div>
+                    <div class="price-slider">
+                        <input type="range" min="0" max="500" value="0" class="slider" id="priceRange">   
+                    </div>
+                </div>
+                <div class="match-filter">
+                    <div class="full-match">
+                        <input type="checkbox" name="full-match">
+                        <label for="full-match">Full Match</label>
+                    </div>
+                    <div class="partial-match">
+                        <input type="checkbox" name="partial-match">
+                        <label for="partial-match">Partial Match</label>
+                    </div>
+                </div>
+                <div class="ingredients-filter">
+                    <p>Ingredients</p>
+                    <div class="ingredient-types">
+                        <div class="buttonAndlabel">
+                            <button onclick="collapseFilter('proteins')"><i class="fa-solid fa-caret-down" style="color: #ffffff;"></i></button><p>Proteins</p>
+                        </div>
+                        <div id="proteins" class="checkboxes">
+                            <label for=""><input type="checkbox" name="protein" value="corned-beef">Corned Beef</label>
+                            <label for=""><input type="checkbox" name="protein" value="egg">Egg</label>
+                            <label for=""><input type="checkbox" name="protein" value="chicken">Chicken</label>
+                            <label for=""><input type="checkbox" name="protein" value="ground beef">Ground Beef</label>
+                            <label for=""><input type="checkbox" name="protein" value="ground pork">Ground Pork</label>
+                            <label for=""><input type="checkbox" name="protein" value="liver">Liver</label>
+                            <label for=""><input type="checkbox" name="protein" value="canned tuna">Canned Tuna</label>
+                            <label for=""><input type="checkbox" name="protein" value="luncheon meat">Luncheon Meat</label>
+                            <label for=""><input type="checkbox" name="protein" value="hotdogs">Hotdogs</label>
+                            <label for=""><input type="checkbox" name="protein" value="tofu">Tofu</label>
+                            <label for=""><input type="checkbox" name="protein" value="beans">Beans</label>
+                            <label for=""><input type="checkbox" name="protein" value="cheese">Cheese</label>
+                        </div>
+                        <div class="buttonAndlabel">
+                            <button onclick="collapseFilter('grains-and-starches')"><i class="fa-solid fa-caret-down" style="color: #ffffff;"></i></button><p>Grains & Starches</p>
+                        </div>
+                        <div id="grains-and-starches" class="checkboxes">
+                            <label for=""><input type="checkbox" name="protein" value="corned-beef">Corned Beef</label>
+                            <label for=""><input type="checkbox" name="protein" value="egg">Egg</label>
+                            <label for=""><input type="checkbox" name="protein" value="chicken">Chicken</label>
+                            <label for=""><input type="checkbox" name="protein" value="ground beef">Ground Beef</label>
+                            <label for=""><input type="checkbox" name="protein" value="ground pork">Ground Pork</label>
+                            <label for=""><input type="checkbox" name="protein" value="liver">Liver</label>
+                            <label for=""><input type="checkbox" name="protein" value="canned tuna">Canned Tuna</label>
+                            <label for=""><input type="checkbox" name="protein" value="luncheon meat">Luncheon Meat</label>
+                            <label for=""><input type="checkbox" name="protein" value="hotdogs">Hotdogs</label>
+                            <label for=""><input type="checkbox" name="protein" value="tofu">Tofu</label>
+                            <label for=""><input type="checkbox" name="protein" value="beans">Beans</label>
+                            <label for=""><input type="checkbox" name="protein" value="cheese">Cheese</label>
+                        </div>
+                        <div class="buttonAndlabel">
+                            <button onclick="collapseFilter('dairy-and-alt')"><i class="fa-solid fa-caret-down" style="color: #ffffff;"></i></button><p>Dairy & Alternatives</p>
+                        </div>
+                        <div id="dairy-and-alt" class="checkboxes">
+                            <label for=""><input type="checkbox" name="protein" value="corned-beef">Corned Beef</label>
+                            <label for=""><input type="checkbox" name="protein" value="egg">Egg</label>
+                            <label for=""><input type="checkbox" name="protein" value="chicken">Chicken</label>
+                            <label for=""><input type="checkbox" name="protein" value="ground beef">Ground Beef</label>
+                            <label for=""><input type="checkbox" name="protein" value="ground pork">Ground Pork</label>
+                            <label for=""><input type="checkbox" name="protein" value="liver">Liver</label>
+                            <label for=""><input type="checkbox" name="protein" value="canned tuna">Canned Tuna</label>
+                            <label for=""><input type="checkbox" name="protein" value="luncheon meat">Luncheon Meat</label>
+                            <label for=""><input type="checkbox" name="protein" value="hotdogs">Hotdogs</label>
+                            <label for=""><input type="checkbox" name="protein" value="tofu">Tofu</label>
+                            <label for=""><input type="checkbox" name="protein" value="beans">Beans</label>
+                            <label for=""><input type="checkbox" name="protein" value="cheese">Cheese</label>
+                        </div>                        
+                        <div class="buttonAndlabel">
+                            <button onclick="collapseFilter('frozen')"><i class="fa-solid fa-caret-down" style="color: #ffffff;"></i></button><p>Frozen & Canned Foods</p>
+                        </div>                        
+                        <div id="frozen" class="checkboxes">
+                            <label for=""><input type="checkbox" name="protein" value="corned-beef">Corned Beef</label>
+                            <label for=""><input type="checkbox" name="protein" value="egg">Egg</label>
+                            <label for=""><input type="checkbox" name="protein" value="chicken">Chicken</label>
+                            <label for=""><input type="checkbox" name="protein" value="ground beef">Ground Beef</label>
+                            <label for=""><input type="checkbox" name="protein" value="ground pork">Ground Pork</label>
+                            <label for=""><input type="checkbox" name="protein" value="liver">Liver</label>
+                            <label for=""><input type="checkbox" name="protein" value="canned tuna">Canned Tuna</label>
+                            <label for=""><input type="checkbox" name="protein" value="luncheon meat">Luncheon Meat</label>
+                            <label for=""><input type="checkbox" name="protein" value="hotdogs">Hotdogs</label>
+                            <label for=""><input type="checkbox" name="protein" value="tofu">Tofu</label>
+                            <label for=""><input type="checkbox" name="protein" value="beans">Beans</label>
+                            <label for=""><input type="checkbox" name="protein" value="cheese">Cheese</label>
+                        </div>
+                        <div class="buttonAndlabel">
+                            <button onclick="collapseFilter('snacks')"><i class="fa-solid fa-caret-down" style="color: #ffffff;"></i></button><p>Snacks & Quick Meals</p>
+                        </div>
+                        <div id="snacks" class="checkboxes">
+                            <label for=""><input type="checkbox" name="protein" value="corned-beef">Corned Beef</label>
+                            <label for=""><input type="checkbox" name="protein" value="egg">Egg</label>
+                            <label for=""><input type="checkbox" name="protein" value="chicken">Chicken</label>
+                            <label for=""><input type="checkbox" name="protein" value="ground beef">Ground Beef</label>
+                            <label for=""><input type="checkbox" name="protein" value="ground pork">Ground Pork</label>
+                            <label for=""><input type="checkbox" name="protein" value="liver">Liver</label>
+                            <label for=""><input type="checkbox" name="protein" value="canned tuna">Canned Tuna</label>
+                            <label for=""><input type="checkbox" name="protein" value="luncheon meat">Luncheon Meat</label>
+                            <label for=""><input type="checkbox" name="protein" value="hotdogs">Hotdogs</label>
+                            <label for=""><input type="checkbox" name="protein" value="tofu">Tofu</label>
+                            <label for=""><input type="checkbox" name="protein" value="beans">Beans</label>
+                            <label for=""><input type="checkbox" name="protein" value="cheese">Cheese</label>
+                        </div>                        
+                        <div class="buttonAndlabel">
+                            <button onclick="collapseFilter('beverages')"><i class="fa-solid fa-caret-down" style="color: #ffffff;"></i></button><p>Beverages & Mixes</p>
+                        </div>
+                        <div id="beverages" class="checkboxes">
+                            <label for=""><input type="checkbox" name="protein" value="corned-beef">Corned Beef</label>
+                            <label for=""><input type="checkbox" name="protein" value="egg">Egg</label>
+                            <label for=""><input type="checkbox" name="protein" value="chicken">Chicken</label>
+                            <label for=""><input type="checkbox" name="protein" value="ground beef">Ground Beef</label>
+                            <label for=""><input type="checkbox" name="protein" value="ground pork">Ground Pork</label>
+                            <label for=""><input type="checkbox" name="protein" value="liver">Liver</label>
+                            <label for=""><input type="checkbox" name="protein" value="canned tuna">Canned Tuna</label>
+                            <label for=""><input type="checkbox" name="protein" value="luncheon meat">Luncheon Meat</label>
+                            <label for=""><input type="checkbox" name="protein" value="hotdogs">Hotdogs</label>
+                            <label for=""><input type="checkbox" name="protein" value="tofu">Tofu</label>
+                            <label for=""><input type="checkbox" name="protein" value="beans">Beans</label>
+                            <label for=""><input type="checkbox" name="protein" value="cheese">Cheese</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Search with Filter and Recipe Grid-->
+             <div class="right-side-content">
+                 <div class="search-bar-with-filters">
+                     <input type="search" name="" id="search-filter" placeholder="Search">
+                     <div class="filters">
+                         <ul>
+                             <li><button id="current"><i class="fa-solid fa-check"></i> Trending</button></li>
+                             <li><button>Price Ascending</button></li>
+                             <li><button>Price Descending</button></li>
+                             <li><button>Rating</button></li>
+                         </ul>
+                     </div>
+                 </div>
+
+                 <!-- Recipe Grid -->
+
+                 <div class="recipe-wrapper">
+                    <div class="recipe-box">
+                        <ul class="recipe-list">  
+                            <li>
+                                <div class="resto-container">     
+                                    <div class="resto-info">
+                                        <div class="resto-title"><b>BurgBox</b></div>
+                                        <div class="resto-type">Burger Place</div>
+                                        <div class="resto-loc">Ateneo Avenue</div>
+                                        <div class="resto-price">Starting at <b>P100</b></div>
+                                        <a href="../pages/recipe-info.html">
+                                            <div class="resto-button">More info</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="resto-container">     
+                                    <div class="resto-info">
+                                        <div class="resto-title"><b>BurgBox</b></div>
+                                        <div class="resto-type">Burger Place</div>
+                                        <div class="resto-loc">Ateneo Avenue</div>
+                                        <div class="resto-price">Starting at <b>P100</b></div>
+                                        <a href="../pages/recipe-info.html">
+                                            <div class="resto-button">More info</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="resto-container">     
+                                    <div class="resto-info">
+                                        <div class="resto-title"><b>BurgBox</b></div>
+                                        <div class="resto-type">Burger Place</div>
+                                        <div class="resto-loc">Ateneo Avenue</div>
+                                        <div class="resto-price">Starting at <b>P100</b></div>
+                                        <a href="../pages/recipe-info.html">
+                                            <div class="resto-button">More info</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>  
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-media-logos">
+                <ul class="social-media-list">
+                    <li><img src="/images/ig.png" alt=""></li>
+                    <li><img src="/images/tiktok.png" alt=""></li>
+                    <li><img src="/images/fb.png" alt=""></li>
+                    <li><img src="/images/x.png" alt=""></li>
+                </ul>
+            </div>
+            <div class="about-links">
+                <h1 class="footer-title">About & Contact</h1>
+                <ul class="about-list">
+                    <li><a href="">About DormBites</a></li>
+                    <li>09846738214</li>
+                    <li>dormbites@gmail.com</li>
+                </ul>
+            </div>
+            <div class="quick-links">
+                <h1 class="footer-title">Quick Links</h1>
+                <ul class="quick-links-list">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Recipes</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Terms Of Service</a></li>
+                </ul>
+            </div>
+            <div class="follow-us">
+                <h1 class="footer-title">Follow Us</h1>
+                <ul class="follow-list">
+                    <li><a href="">Instagram</a></li>
+                    <li><a href="">Tiktok</a></li>
+                    <li><a href="">Facebook</a></li>
+                    <li><a href="">X</a></li>
+                </ul>                
+            </div>
+        </div>
+    </footer>
+
+    <script src="/scripts/recipes.js"></script>
+</body>
+</html>

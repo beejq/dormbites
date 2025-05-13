@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Info</title>
+    <link rel="stylesheet" href="/styles/recipe-info.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+   
+        <!-- Navigation Bar -->
+    <nav>
+        <a href="home.html"><img id="logo" src="/images/logo.png" alt=""></a>
+        <ul class="navigation">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="">Restaurants</a></li>
+            <li><a class="active" href="/pages/recipes.html">Recipes</a></li>
+            <li><a href="">About Us</a></li>
+            <li><a href="">ExampleUser</a></li>
+            <li><a id="hamburger" href="">
+                <i class="fa fa-bars"></i>
+            </a></li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <div class="header-top">
+            <div class="recipe-navigation">
+                <a href="">Recipes / </a>
+                <p>Tortang Talong</p>
+            </div>
+            <div class="bookmark">
+                <i class="fa-regular fa-bookmark" onclick="toggleBookmark(this)"></i>
+            </div>
+        </div>
+
+        <div class="title">
+            <h1>Tortang Talong</h1>
+        </div>
+
+        <div class="recipe-info">
+            <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-regular fa-star"></i>
+                <p class="rating">4/5</p>
+                <p class="review-num">(3)</p>
+            </div>
+            <div class="tags">
+                <button>Eggplant</button>
+                <button>Eggs</button>
+                <button>Breakfast</button>
+            </div>
+        </div>
+
+        <div class="recipe-summary">
+            <p>A classic filipino breakfast dish that is filled with nutrients and deliciousness. It is easy to make and only needs a few ingredients to make. A great option for college dormers to start up their day before going to school! This recipe is rich in vitamins C, K, and B6. Pair it with rice and you are good!</p>
+        </div>
+
+        <div class="image-showcase">
+            <div class="left-images">
+                <div class="image-container">
+                    <img src="/images/1talong.png" alt="">
+                </div>
+                <div class="image-container">
+                    <img src="/images/2talong.png" alt="">
+                </div>
+                <div class="image-container">
+                    <img src="/images/3talong.png" alt="">
+                </div>
+                <div class="image-container">
+                    <img src="/images/4talong.png" alt="">
+                </div>
+            </div>
+            <div class="right-image">
+                <div class="image-container-right">
+                    <img src="/images/5talong.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="middle-content">
+            <div class="left-recipe-box">
+                <h1>Recipe Info</h1>
+                <hr>
+                <div class="cooking-infos">
+                    <div class="times">
+                        <div class="times-info">
+                            <h4>Servings:</h4>
+                            <p>4 Servings</p>
+                        </div>
+                        <div class="times-info">
+                            <h4>Cook Time:</h4>
+                            <p>12 Minutes</p>
+                        </div>
+                        <div class="times-info">
+                            <h4>Total Time:</h4>
+                            <p>27 Minutes</p>
+                        </div>
+                        <div class="times-info">
+                            <h4>Prep Time:</h4>
+                            <p>15 Minutes</p>
+                        </div>
+                    </div>
+
+                    <div class="ingredients-box">
+                        <h1 class="ingredients-title">Ingredients</h1>
+                        <hr>
+                        <ul class="ingredients">
+                            <li>2 pieces Chinese eggplant</li>
+                            <li>1 piece raw egg</li>
+                            <li>0.5 teaspoon salt</li>
+                            <li>3 tablespoons cooking oil</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-box">
+                <h1>Preparation</h1>
+                <hr>
+                <div class="step">
+                    <h3>
+                        <span class="step-num">Step 1</span> Remove the skin from the eggplant
+                    </h3>
+                    <p>
+                        Start out by taking your 4 pieces of Chinese eggplant and grilling them. Do this until the skin becomes nearly black in color, then let it cool. Once it is safe to touch, start peeling the skin off, and then set it aside.
+                    </p>
+                    <img src="/images/step1.png" alt="">
+                </div>
+                <div class="step">
+                    <h3>
+                        <span class="step-num">Step 2</span> Create the egg coating for the eggplant
+                    </h3>
+                    <p>
+                        In a bowl, crack open 2 raw eggs. Sprinkle 1 teaspoon of salt for added flavor onto the bowl, and then beat the mixture. Now take out your skinless eggplant from earlier, and put it on a flat surface.
+                    </p>
+                </div>
+                <div class="step">
+                    <h3>
+                        <span class="step-num">Step 3</span> Flatten the eggplant and coat it
+                    </h3>
+                    <p>
+                        Grab your fork and flatten the eggplants. And then get your bowl with the beaten eggs and salt&period; Making sure you&apos;ve coated it fully, dip your flattened eggplant inside the bowl&period;
+                    </p>
+                    <img src="/images/step3.png" alt="">
+                </div>
+                <div class="step">
+                    <h3>
+                        <span class="step-num">Step 4</span> Fry the Eggplants
+                    </h3>
+                    <p>
+                        Heat up a pan, and then add 4 tablespoons of cooking oil inside. Then place your coated eggplants on the pan, and fry these. Keep an eye on them, and ensure that you get both sides fried nicely. This should take approximately 3 to 4 minutes per side with medium heat&period;
+                    </p>
+                    <img src="/images/step4.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/scripts/bookmark.js"></script>
+
+</body>
+</html>

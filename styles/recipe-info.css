@@ -166,12 +166,12 @@ ul li a {
 
 /* Middle Content */
 
-.middle-content{
+.middle-content {
   display: flex;
   gap: 80px;
 }
 
-.times{
+.times {
   display: flex;
   flex-direction: row;
   width: 302px;
@@ -181,17 +181,31 @@ ul li a {
   margin-left: 32px;
 }
 
-.ingredients{
+.ingredients {
   display: flex;
   flex-direction: column;
   list-style: disc;
 }
 
-.ingredients li{
+.ingredients li {
   margin: 0;
 }
 
-.left-recipe-box{
+.left-recipe-box {
   width: 312px;
 }
 
+.user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.user li {
+  margin: 0;
+}
+
+.user-pic {
+  height: 24px;
+}

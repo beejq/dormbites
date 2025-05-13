@@ -47,6 +47,21 @@ ul li a{
     margin-bottom: 2px;
 }
 
+.user{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 4px;
+}
+
+.user li{
+    margin: 0;
+}
+
+.user-pic{
+    height: 24px;
+}
+
 /* Responsive Navigation Bar */
 @media (max-width: 600px){
     .navigation li:not(:last-child){

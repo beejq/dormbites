@@ -36,10 +36,17 @@
             <h1>DormBites</h1>
             <h2>Fast Bites, Smart Choice</h2>
             <div class="search-bar">
-                <input type="search" id="search-recipe-restaurant" placeholder="Budget recipe/meals to bring you satisfaction and nutrients">
+                <input type="search" id="search-recipe-restaurant" placeholder="Budget recipe/meals to bring you satisfaction and nutrients" onclick="showBox('box')">
                 <a href="/pages/recipes.html">
                     <button id="confirm-search">Search</button>
                 </a>
+            </div>
+            <div class="search-box-wrapper">
+                <div id="box" class="search-box">
+                    <div class="filter-by">
+                        <p>Filter by:</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -104,5 +111,6 @@
             </div>
         </div>
       </footer>
+      <script src="/scripts/search-bar.js"></script>
 </body>
 </html>

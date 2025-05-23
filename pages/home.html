@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
@@ -44,8 +45,168 @@
             <div class="search-box-wrapper">
                 <div id="box" class="search-box">
                     <div class="filter-by">
-                        <p>Filter by:</p>
+                        <p>Filter by</p>
+                        <div class="tags">
+                            <div class="food">
+                                <button>Canned Corned Beef X</button>
+                                <button>Eggs X</button>
+                            </div>
+                            <div class="recipe-filter">
+                                <button>Popular</button>
+                                <button>New</button>
+                                <button>Prep Time</button>
+                                <button>Servings</button>
+                                <button class="add-filter-btn">Add Filter</button>
+                            </div>
+                        </div>
+                        <p>History</p>
+                        <div class="history">
+                            <div class="history-contents">
+                                <div class="circle-img"><img src="/images/1talong.png" alt=""></div>
+                                <p class="history-title">Tortang Talong</p>
+                                <p class="classification">Breakfast</p>
+                            </div>
+                            <div class="history-contents">
+                                <div class="circle-img"><img src="/images/1talong.png" alt=""></div>
+                                <p class="history-title">Tortang Talong</p>
+                                <p class="classification">Dessert</p>
+                            </div>
+                            <div class="history-contents">
+                                <div class="circle-img"><img src="/images/1talong.png" alt=""></div>
+                                <p class="history-title">Tortang Talong</p>
+                                <p class="classification">Lunch</p>
+                            </div>
+                            <div class="history-contents">
+                                <div class="circle-img"><img src="/images/1talong.png" alt=""></div>
+                                <p class="history-title">Tortang Talong</p>
+                                <p class="classification">Dinner</p>
+                            </div>
+                        </div>
                     </div>
+                    <p>Quick Actions</p>
+                    <div class="quick-actions">
+                        <div class="icon-title">
+                            <div class="quick-img">
+                                <img src="/images/bookmark.png" alt="">
+                            </div>
+                            <p class="quick-title">Bookmarks</p>
+                        </div>
+                    </div>
+
+
+                    <div class="ingredients-filter">
+                    <div class="ingredients-matchfilter">
+                        <p class="title">Ingredients</p>
+                        <div class="match-filter">
+                            <label class="par-match" for=""><input type="checkbox" name="" id="">Partial Match</label>
+                            <label class="full-match" for=""><input type="checkbox" name="" id="">Full Match</label>
+                        </div>
+                    </div>
+                    <div class="ingredient-types">
+                        <div class="buttonAndlabel">
+                            <button onclick="collapseFilter('proteins')"><i class="fa-solid fa-caret-down" style="color: #ffffff;"></i></button><p>Proteins</p>
+                        </div>
+                        <div id="proteins" class="checkboxes">
+                            <label for=""><input type="checkbox" name="protein" value="corned-beef">Corned Beef</label>
+                            <label for=""><input type="checkbox" name="protein" value="egg">Egg</label>
+                            <label for=""><input type="checkbox" name="protein" value="chicken">Chicken</label>
+                            <label for=""><input type="checkbox" name="protein" value="ground beef">Ground Beef</label>
+                            <label for=""><input type="checkbox" name="protein" value="ground pork">Ground Pork</label>
+                            <label for=""><input type="checkbox" name="protein" value="liver">Liver</label>
+                            <label for=""><input type="checkbox" name="protein" value="canned tuna">Canned Tuna</label>
+                            <label for=""><input type="checkbox" name="protein" value="luncheon meat">Luncheon Meat</label>
+                            <label for=""><input type="checkbox" name="protein" value="hotdogs">Hotdogs</label>
+                            <label for=""><input type="checkbox" name="protein" value="tofu">Tofu</label>
+                            <label for=""><input type="checkbox" name="protein" value="beans">Beans</label>
+                            <label for=""><input type="checkbox" name="protein" value="cheese">Cheese</label>
+                        </div>
+                        <div class="buttonAndlabel">
+                            <button onclick="collapseFilter('grains-and-starches')"><i class="fa-solid fa-caret-down" style="color: #ffffff;"></i></button><p>Grains & Starches</p>
+                        </div>
+                        <div id="grains-and-starches" class="checkboxes">
+                            <label for=""><input type="checkbox" name="protein" value="corned-beef">Corned Beef</label>
+                            <label for=""><input type="checkbox" name="protein" value="egg">Egg</label>
+                            <label for=""><input type="checkbox" name="protein" value="chicken">Chicken</label>
+                            <label for=""><input type="checkbox" name="protein" value="ground beef">Ground Beef</label>
+                            <label for=""><input type="checkbox" name="protein" value="ground pork">Ground Pork</label>
+                            <label for=""><input type="checkbox" name="protein" value="liver">Liver</label>
+                            <label for=""><input type="checkbox" name="protein" value="canned tuna">Canned Tuna</label>
+                            <label for=""><input type="checkbox" name="protein" value="luncheon meat">Luncheon Meat</label>
+                            <label for=""><input type="checkbox" name="protein" value="hotdogs">Hotdogs</label>
+                            <label for=""><input type="checkbox" name="protein" value="tofu">Tofu</label>
+                            <label for=""><input type="checkbox" name="protein" value="beans">Beans</label>
+                            <label for=""><input type="checkbox" name="protein" value="cheese">Cheese</label>
+                        </div>
+                        <div class="buttonAndlabel">
+                            <button onclick="collapseFilter('dairy-and-alt')"><i class="fa-solid fa-caret-down" style="color: #ffffff;"></i></button><p>Dairy & Alternatives</p>
+                        </div>
+                        <div id="dairy-and-alt" class="checkboxes">
+                            <label for=""><input type="checkbox" name="protein" value="corned-beef">Corned Beef</label>
+                            <label for=""><input type="checkbox" name="protein" value="egg">Egg</label>
+                            <label for=""><input type="checkbox" name="protein" value="chicken">Chicken</label>
+                            <label for=""><input type="checkbox" name="protein" value="ground beef">Ground Beef</label>
+                            <label for=""><input type="checkbox" name="protein" value="ground pork">Ground Pork</label>
+                            <label for=""><input type="checkbox" name="protein" value="liver">Liver</label>
+                            <label for=""><input type="checkbox" name="protein" value="canned tuna">Canned Tuna</label>
+                            <label for=""><input type="checkbox" name="protein" value="luncheon meat">Luncheon Meat</label>
+                            <label for=""><input type="checkbox" name="protein" value="hotdogs">Hotdogs</label>
+                            <label for=""><input type="checkbox" name="protein" value="tofu">Tofu</label>
+                            <label for=""><input type="checkbox" name="protein" value="beans">Beans</label>
+                            <label for=""><input type="checkbox" name="protein" value="cheese">Cheese</label>
+                        </div>                        
+                        <div class="buttonAndlabel">
+                            <button onclick="collapseFilter('frozen')"><i class="fa-solid fa-caret-down" style="color: #ffffff;"></i></button><p>Frozen & Canned Foods</p>
+                        </div>                        
+                        <div id="frozen" class="checkboxes">
+                            <label for=""><input type="checkbox" name="protein" value="corned-beef">Corned Beef</label>
+                            <label for=""><input type="checkbox" name="protein" value="egg">Egg</label>
+                            <label for=""><input type="checkbox" name="protein" value="chicken">Chicken</label>
+                            <label for=""><input type="checkbox" name="protein" value="ground beef">Ground Beef</label>
+                            <label for=""><input type="checkbox" name="protein" value="ground pork">Ground Pork</label>
+                            <label for=""><input type="checkbox" name="protein" value="liver">Liver</label>
+                            <label for=""><input type="checkbox" name="protein" value="canned tuna">Canned Tuna</label>
+                            <label for=""><input type="checkbox" name="protein" value="luncheon meat">Luncheon Meat</label>
+                            <label for=""><input type="checkbox" name="protein" value="hotdogs">Hotdogs</label>
+                            <label for=""><input type="checkbox" name="protein" value="tofu">Tofu</label>
+                            <label for=""><input type="checkbox" name="protein" value="beans">Beans</label>
+                            <label for=""><input type="checkbox" name="protein" value="cheese">Cheese</label>
+                        </div>
+                        <div class="buttonAndlabel">
+                            <button onclick="collapseFilter('snacks')"><i class="fa-solid fa-caret-down" style="color: #ffffff;"></i></button><p>Snacks & Quick Meals</p>
+                        </div>
+                        <div id="snacks" class="checkboxes">
+                            <label for=""><input type="checkbox" name="protein" value="corned-beef">Corned Beef</label>
+                            <label for=""><input type="checkbox" name="protein" value="egg">Egg</label>
+                            <label for=""><input type="checkbox" name="protein" value="chicken">Chicken</label>
+                            <label for=""><input type="checkbox" name="protein" value="ground beef">Ground Beef</label>
+                            <label for=""><input type="checkbox" name="protein" value="ground pork">Ground Pork</label>
+                            <label for=""><input type="checkbox" name="protein" value="liver">Liver</label>
+                            <label for=""><input type="checkbox" name="protein" value="canned tuna">Canned Tuna</label>
+                            <label for=""><input type="checkbox" name="protein" value="luncheon meat">Luncheon Meat</label>
+                            <label for=""><input type="checkbox" name="protein" value="hotdogs">Hotdogs</label>
+                            <label for=""><input type="checkbox" name="protein" value="tofu">Tofu</label>
+                            <label for=""><input type="checkbox" name="protein" value="beans">Beans</label>
+                            <label for=""><input type="checkbox" name="protein" value="cheese">Cheese</label>
+                        </div>                        
+                        <div class="buttonAndlabel">
+                            <button onclick="collapseFilter('beverages')"><i class="fa-solid fa-caret-down" style="color: #ffffff;"></i></button><p>Beverages & Mixes</p>
+                        </div>
+                        <div id="beverages" class="checkboxes">
+                            <label for=""><input type="checkbox" name="protein" value="corned-beef">Corned Beef</label>
+                            <label for=""><input type="checkbox" name="protein" value="egg">Egg</label>
+                            <label for=""><input type="checkbox" name="protein" value="chicken">Chicken</label>
+                            <label for=""><input type="checkbox" name="protein" value="ground beef">Ground Beef</label>
+                            <label for=""><input type="checkbox" name="protein" value="ground pork">Ground Pork</label>
+                            <label for=""><input type="checkbox" name="protein" value="liver">Liver</label>
+                            <label for=""><input type="checkbox" name="protein" value="canned tuna">Canned Tuna</label>
+                            <label for=""><input type="checkbox" name="protein" value="luncheon meat">Luncheon Meat</label>
+                            <label for=""><input type="checkbox" name="protein" value="hotdogs">Hotdogs</label>
+                            <label for=""><input type="checkbox" name="protein" value="tofu">Tofu</label>
+                            <label for=""><input type="checkbox" name="protein" value="beans">Beans</label>
+                            <label for=""><input type="checkbox" name="protein" value="cheese">Cheese</label>
+                        </div>
+                    </div>
+                </div>
                 </div>
             </div>
         </div>

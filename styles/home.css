@@ -365,6 +365,7 @@ ul li a {
 .search-box p {
   text-align: left;
   margin-left: 16px;
+  font-weight: 500;
 }
 
 .search-box.active {
@@ -374,4 +375,205 @@ ul li a {
 .search-box-wrapper {
   display: flex;
   justify-content: center;
+}
+
+/* Inside Search Box When Clicked */
+
+/* Filter */
+.tags {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+}
+
+.tags p {
+  font-weight: normal;
+}
+
+.food {
+  display: flex;
+  justify-content: flex-start;
+  gap: 4px;
+  margin-left: 24px;
+}
+
+.recipe-filter {
+  display: flex;
+  justify-content: flex-start;
+  gap: 4px;
+  margin-left: 24px;
+}
+
+.tags button {
+  border-radius: 10px;
+  border: none;
+  background-color: #ececec;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.add-filter-btn {
+  background-color: #eff8fd;
+  color: #336fca;
+}
+
+/* History */
+.history {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+
+.history-contents {
+  display: flex;
+  margin-left: 24px;
+  align-items: center;
+}
+
+.circle-img img {
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 50%;
+  height: 28px;
+  width: 28px;
+}
+
+.circle-img {
+  display: flex;
+  justify-content: flex-start;
+  border-radius: 50%;
+  height: 28px;
+  width: 28px;
+}
+
+.history-title {
+  margin: 0;
+  font-size: 12px;
+}
+
+.classification {
+  margin: 0;
+  color: #757575;
+  font-size: 12px;
+}
+
+/* Quick Actions */
+
+.quick-actions {
+  display: flex;
+}
+
+.icon-title {
+  display: flex;
+  margin-left: 24px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.quick-title {
+  margin: 0px 0px 0px 4px;
+  font-size: 12px;
+}
+
+.quick-img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Ingredients */
+
+/* Ingredients Collapse */
+.checkboxes {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  visibility: hidden;
+  height: 0;
+  flex-wrap: wrap;
+  font-size: 12px;
+}
+
+.checkboxes.active {
+  visibility: visible;
+  height: auto;
+  font-weight: normal;
+  margin-bottom: 16px;
+}
+
+.checkboxes input {
+  margin-right: 12px;
+}
+
+/* Ingredient Filter */
+
+.ingredients-filter p {
+  font-size: 12px;
+  margin-left: 0px;
+}
+
+.ingredients-filter .title {
+  font-size: 16px;
+}
+
+.ingredients-filter {
+  margin-left: 24px;
+}
+
+.ingredient-types {
+  display: flex;
+  flex-direction: column;
+  line-height: 0px;
+}
+
+.buttonAndlabel {
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.buttonAndlabel button {
+  background-color: #3b4818;
+  border-radius: 30px;
+  border: none;
+  width: 12px;
+  height: 12px;
+  background-color: #3b4818;
+  color: #ffffff;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  align-self: center;
+}
+
+.buttonAndlabel i {
+  display: flex;
+  font-size: 8px;
+  justify-content: center;
+}
+
+.ingredients-matchfilter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.match-filter {
+  display: flex;
+  font-size: 12px;
+  margin-right: 20px;
+  align-items: center;
+  gap: 4px;
+}
+
+.match-filter .par-match {
+  font-weight: normal;
+}
+
+.match-filter .full-match {
+  font-weight: normal;
 }
